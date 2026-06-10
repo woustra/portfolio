@@ -11,3 +11,15 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 reveals.forEach(el => observer.observe(el));
+
+function toggleText(id, btn) {
+  const text = document.getElementById(id);
+
+  if (text.style.display === "none") {
+    text.style.display = "inline";
+    btn.textContent = "Read less";
+  } else {
+    text.style.display = "none";
+    btn.textContent = "Read more";
+  }
+}
